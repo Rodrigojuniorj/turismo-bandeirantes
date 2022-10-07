@@ -1,0 +1,154 @@
+.parallax {
+  height: 150px;
+  background-image: url("../../assets/img/inicio/parallax.jpg");
+
+
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.parallax div {
+  width: 100%;
+  height: 100%;
+  background: rgb(15, 130, 57, .8);
+}
+
+.parallax input[type=text],
+.parallax textarea,
+.parallax select {
+  border: 1px solid transparent;
+  transition: .3s;
+}
+
+.parallax input[type=text]::placeholder,
+.parallax textarea::placeholder,
+.parallax select::placeholder {
+  color: gray;
+}
+
+.parallax input[type=text]:focus,
+.parallax textarea:focus,
+.parallax select:focus {
+  outline: none;
+  border: 1px solid black;
+  background-color: #ececec;
+}
+
+.parallax button {
+  background-color: rgb(170, 170, 170);
+  color: black;
+  height: 2.5rem;
+  border-radius: 4px;
+  transition: .3s;
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.parallax button:hover {
+  transition: 500ms ease;
+  filter: brightness(.8);
+}
+
+.badges img{
+  display: initial;
+}
+
+.download {
+  width: 100%;
+  display: grid;
+  grid-column: 1;
+  align-items: center;
+  height: auto;
+  background-image: url("../../assets/img/inicio/fundoApp.png");
+  background-attachment: fixed;
+}
+
+.download .block img:nth-child(1) {
+  margin-top: 30px;
+  -webkit-animation: float 5s ease-in-out infinite;
+}
+
+.download .cartao {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  display: initial;
+  @apply bg-gray-100
+}
+
+.inicio-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.inicio h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  color: #283729;
+
+  line-height: 3rem;
+  @apply text-center
+}
+
+.inicio .download {
+  width: 250px;
+}
+
+
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-out;
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+  }
+
+  50% {
+    -webkit-transform: translatey(-20px);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px);
+  }
+}
+
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .download .cartao {
+    border-radius: 40px;
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .inicio h1 {
+    font-size: 45px;
+  }
+
+  .download .cartao {
+    width: 100%;
+    border-radius: 0 0 40px 40px;
+  }
+
+}
